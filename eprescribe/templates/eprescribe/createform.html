@@ -1,0 +1,9 @@
+{%extends 'eprescribe/base.html'%}
+{%block title%}{{title}}{%endblock title%}
+{%block content%}
+<form method="post" class='uniForm'>
+	{% csrf_token %}
+	{{ form.as_p}}
+	<input type="submit" value="Save">
+</form>
+{%endblock%}

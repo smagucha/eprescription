@@ -1,0 +1,12 @@
+{%extends 'eprescribe/base.html'%}
+{%block title%}{{title}}{%endblock title%}
+{%block content%}
+<form method="post" class='uniForm'>
+	{% csrf_token %}
+	{{updatemed.physcian}}
+	{{updatemed.entry_date}}
+	{{updatemed.prescription}}
+	{{updatemed.patient_name}}
+	<input type="submit" value="delete">
+</form>
+{%endblock%}

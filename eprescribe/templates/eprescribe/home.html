@@ -1,0 +1,40 @@
+{%extends 'eprescribe/base.html'%}
+{%block title%}{{title}}{%endblock title%}
+{%block content%}
+ <table border="1">
+ 	<th>
+ 		No
+ 	</th>
+ 	<th>
+ 	physcian
+ 	</th>
+ 	<th>
+ 		entry_date
+ 	</th>
+ 	<th>
+ 		prescription
+ 	</th>
+ 	<th>
+ 		patient name
+ 	</th>
+ 	{%for detail in prescription%}
+ 			<tr>
+ 				<td>
+ 					{{forloop.counter}}
+ 				</td>
+ 				<td>
+ 					{{detail.physcian}}
+ 				</td>
+ 				<td>
+ 					{{detail.entry_date}}
+ 				</td>
+ 				<td>
+ 					{{detail.prescription}}
+ 				</td>
+ 				<td>
+ 					{{detail.patient_name}}
+ 				</td>
+ 			</tr>
+ 		{%endfor%}
+ </table>
+{%endblock%}
